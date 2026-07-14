@@ -4,15 +4,16 @@ use Maatwebsite\Excel\Collections\CellCollection;
 
 class CellCollectionTest extends TestCase {
 
+    protected CellCollection $collection;
 
-    public function __construct()
+    protected function setUp(): void
     {
+        parent::setUp();
         $this->collection = new CellCollection([
             'one' => 'one',
             'two' => 'two'
         ]);
     }
-
 
     public function testSetItems()
     {

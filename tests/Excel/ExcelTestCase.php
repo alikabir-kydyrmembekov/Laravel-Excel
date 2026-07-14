@@ -3,8 +3,9 @@
 use Mockery as m;
 use Maatwebsite\Excel\Excel;
 use Illuminate\Filesystem\Filesystem;
+use PHPUnit\Framework\TestCase;
 
-class ExcelTestCase extends PHPUnit_Framework_TestCase {
+class ExcelTestCase extends TestCase {
 
     /**
      * Mocks
@@ -19,7 +20,7 @@ class ExcelTestCase extends PHPUnit_Framework_TestCase {
     /**
      * Setup test case
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -103,7 +104,7 @@ class ExcelTestCase extends PHPUnit_Framework_TestCase {
      * Teardown
      * @return [type] [description]
      */
-    public function tearDown()
+    public function tearDown(): void
     {
         m::close();
     }
